@@ -1,0 +1,6 @@
+# local workspace noise
+.DS_Store
+.obsidian/workspace.json
+.env
+__pycache__/
+*.pyc

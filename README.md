@@ -6,10 +6,10 @@ This repository is a compact library of cognitive primitives that an agent can l
 
 The design is intentionally local-first:
 
-- Markdown files are the source of truth.
-- JSON is used only for indexes and schemas.
+- Markdown files are the source of truth for human and agent instructions.
+- JSON is used for the canonical machine-readable model index.
 - Each model is small enough to inject into an agent prompt.
-- The library is modular: load one model, one folder, or the full index.
+- The library is modular: load one category, one model, or the full index.
 - The output should improve decisions, not create intellectual decoration.
 
 Inspired by public mental-model lists such as this Reddit discussion: https://www.reddit.com/r/selfhelp/comments/utu7v0/30_mental_models_that_will_make_you_more/
@@ -21,22 +21,21 @@ Inspired by public mental-model lists such as this Reddit discussion: https://ww
   mental_model_schema.json       Canonical card schema
   mental_models_agent_skill.md   Agent instructions for using the library
   model_selector.md              Lightweight routing rules
-01_DECISION_MAKING/              Models for choices, tradeoffs, and strategy
-02_PRODUCTIVITY/                 Models for execution and focus
-03_RESILIENCE/                   Models for robustness and adaptation
-04_COGNITIVE_BIASES/             Bias checks and decision hygiene
-05_GROWTH_AND_LEVERAGE/          Models for scale, compounding, and asymmetric upside
+01_DECISION_MAKING/README.md     Choices, tradeoffs, and strategy
+02_PRODUCTIVITY/README.md        Execution and focus
+03_RESILIENCE/README.md          Robustness and adaptation
+04_COGNITIVE_BIASES/README.md    Bias checks and decision hygiene
+05_GROWTH_AND_LEVERAGE/README.md Scale, compounding, and asymmetric upside
 data/
-  mental_models_index.json       Machine-readable index
+  mental_models_index.json       30 machine-readable mental models
 ```
 
 ## How An Agent Should Use This
 
 1. Read `data/mental_models_index.json`.
 2. Select 1-3 relevant models for the user's situation.
-3. Load only those model files into context.
-4. Ask the model's diagnostic questions.
-5. Produce a concrete next action, decision frame, or risk check.
+3. Ask the model's diagnostic questions.
+4. Produce a concrete next action, decision frame, or risk check.
 
 Do not turn every problem into a model-matching exercise. Use the smallest useful frame.
 

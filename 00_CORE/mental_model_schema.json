@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mental Model Card",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "category",
+    "summary",
+    "use_when",
+    "questions",
+    "action",
+    "failure",
+    "related"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "title": { "type": "string" },
+    "category": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "summary": { "type": "string" },
+    "use_when": { "type": "string" },
+    "questions": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+    "action": { "type": "string" },
+    "failure": { "type": "string" },
+    "related": { "type": "array", "items": { "type": "string" } }
+  }
+}
