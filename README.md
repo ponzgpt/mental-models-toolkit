@@ -1,41 +1,67 @@
-# Mental Models Toolkit
+# mental-models-toolkit
 
-Agent-readable mental models for decision making, productivity, resilience, and local PKM workflows.
+Native mental-model skill pack for agents that help with decisions, prioritization, risk checks, productivity friction, and postmortems.
 
-This repository is a compact library of cognitive primitives that an agent can load into context when helping a human think through choices, projects, habits, tradeoffs, and failure modes.
-
-The design is intentionally local-first:
-
-- Markdown files are the source of truth for human and agent instructions.
-- JSON is used for the canonical machine-readable model index.
-- Each model is small enough to inject into an agent prompt.
-- The library is modular: load one category, one model, or the full index.
-- The output should improve decisions, not create intellectual decoration.
+This repository is a compact library of cognitive primitives that an agent can load into context when helping a human reason through choices and tradeoffs. It is optimized for Hermes Agent and OpenClaw, while remaining readable by Claude Code and Codex.
 
 Inspired by public mental-model lists such as this Reddit discussion: https://www.reddit.com/r/selfhelp/comments/utu7v0/30_mental_models_that_will_make_you_more/
 
-## Repository Map
+The descriptions here are original operating summaries, not copied source text.
+
+## Compatibility Targets
+
+- Hermes Agent by Nous Research: `.hermes.md`, `AGENTS.md`, and `skills/mental-model-selector/SKILL.md`.
+- OpenClaw by Peter Steinberger: workspace/project skill under `skills/<slug>/SKILL.md`.
+- Claude Code and Codex: `CLAUDE.md`, `AGENTS.md`, and plain JSON/Markdown.
+
+## Native Entry Points
 
 ```text
+AGENTS.md                              Shared agent instructions
+.hermes.md                             Hermes-native project context
+CLAUDE.md                              Claude Code compatibility context
+skills.sh.json                         Skill grouping metadata
+skills/
+  mental-model-selector/SKILL.md       Main installable skill
 00_CORE/
-  mental_model_schema.json       Canonical card schema
-  mental_models_agent_skill.md   Agent instructions for using the library
-  model_selector.md              Lightweight routing rules
-01_DECISION_MAKING/README.md     Choices, tradeoffs, and strategy
-02_PRODUCTIVITY/README.md        Execution and focus
-03_RESILIENCE/README.md          Robustness and adaptation
-04_COGNITIVE_BIASES/README.md    Bias checks and decision hygiene
-05_GROWTH_AND_LEVERAGE/README.md Scale, compounding, and asymmetric upside
+  mental_model_schema.json             Canonical model schema
+  mental_models_agent_skill.md         Legacy/core agent instructions
+  model_selector.md                    Routing notes
 data/
-  mental_models_index.json       30 machine-readable mental models
+  mental_models_index.json             30 machine-readable mental models
 ```
+
+## Setup For Hermes Agent
+
+Hermes can scan external skill directories. From a local clone:
+
+```yaml
+skills:
+  external_dirs:
+    - /absolute/path/mental-models-toolkit/skills
+```
+
+Then invoke `/mental-model-selector` or let Hermes select the skill naturally.
+
+## Setup For OpenClaw
+
+OpenClaw loads workspace skills from `<workspace>/skills`. Copy or symlink the skill:
+
+```bash
+mkdir -p ~/.openclaw/workspace/skills
+ln -s /absolute/path/mental-models-toolkit/skills/mental-model-selector ~/.openclaw/workspace/skills/mental-model-selector
+openclaw skills list
+```
+
+Start a new session or restart the gateway if the skills watcher has not refreshed.
 
 ## How An Agent Should Use This
 
-1. Read `data/mental_models_index.json`.
-2. Select 1-3 relevant models for the user's situation.
-3. Ask the model's diagnostic questions.
-4. Produce a concrete next action, decision frame, or risk check.
+1. Load `skills/mental-model-selector/SKILL.md`.
+2. Read `data/mental_models_index.json`.
+3. Select at most three relevant models.
+4. Ask only the diagnostic questions needed.
+5. Produce a concrete decision frame, next action, risk checklist, tradeoff table, or postmortem review.
 
 Do not turn every problem into a model-matching exercise. Use the smallest useful frame.
 
@@ -52,16 +78,16 @@ Agent:
 
 ## Human Workflow
 
-Use this repo as a prompt pack for:
+Use this repo for:
 
+- Hermes/OpenClaw workspace skills
 - Obsidian vaults
-- Hermes/Moltbot-style local agents
 - Codex work sessions
 - decision journals
 - weekly reviews
 - project triage
 
-Recommended convention for notes:
+Recommended note front matter:
 
 ```markdown
 ---
@@ -71,6 +97,13 @@ review_date: 2026-06-30
 ---
 ```
 
+## Verification
+
+```bash
+python3 -m json.tool 00_CORE/mental_model_schema.json >/tmp/schema.valid
+python3 -m json.tool data/mental_models_index.json >/tmp/index.valid
+```
+
 ## License
 
-MIT. The model descriptions in this repository are original summaries and operating instructions, not copied source text.
+MIT.
