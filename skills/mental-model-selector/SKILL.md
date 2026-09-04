@@ -49,6 +49,13 @@ Next action: <one concrete action>
 Failure check: <what would make this lens misleading>
 ```
 
+## Conflict Handling
+
+When two models point in different directions, surface the conflict
+directly. Example: `parkinsons_law` may favor a tight deadline while
+`second_order_thinking` may reveal that rushing creates expensive
+downstream errors.
+
 ## Pitfalls
 
 - Do not use more than three models by default.
