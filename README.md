@@ -8,18 +8,25 @@ Inspired by public mental-model lists such as this Reddit discussion: https://ww
 
 The descriptions here are original operating summaries, not copied source text.
 
+## Install
+
+```bash
+hermes skills install ponzgpt/mental-models-toolkit/skills/mental-model-selector
+```
+
+Then see [docs/vault-and-hermes.md](docs/vault-and-hermes.md) for vault layout and prompts, and [docs/examples.md](docs/examples.md) for worked decisions. Every model also exists as an Obsidian-ready card in [`cards/`](cards/).
+
 ## Compatibility Targets
 
 - Hermes Agent by Nous Research: `.hermes.md`, `AGENTS.md`, and `skills/mental-model-selector/SKILL.md`.
 - OpenClaw by Peter Steinberger: workspace/project skill under `skills/<slug>/SKILL.md`.
-- Claude Code and Codex: `CLAUDE.md`, `AGENTS.md`, and plain JSON/Markdown.
+- Claude Code and Codex: `AGENTS.md` and plain JSON/Markdown.
 
 ## Native Entry Points
 
 ```text
 AGENTS.md                              Shared agent instructions
 .hermes.md                             Hermes-native project context
-CLAUDE.md                              Claude Code compatibility context
 skills.sh.json                         Skill grouping metadata
 skills/
   mental-model-selector/SKILL.md       Main installable skill

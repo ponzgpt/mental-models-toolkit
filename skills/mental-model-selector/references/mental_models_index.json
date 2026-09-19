@@ -1,0 +1,786 @@
+{
+  "version": "0.1.0",
+  "source_note": "Original operating summaries inspired by common public mental-model lists and decision-making literature.",
+  "models": [
+    {
+      "id": "second_order_thinking",
+      "title": "Second-Order Thinking",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "decisions",
+        "strategy",
+        "consequences"
+      ],
+      "summary": "Evaluate the consequences of the consequences before choosing an action.",
+      "use_when": "A decision has delayed effects, incentives, dependencies, or social consequences.",
+      "questions": [
+        "What happens immediately if this works?",
+        "What happens six weeks later?",
+        "Who changes behavior because of this decision?",
+        "What new problem does the solution create?"
+      ],
+      "action": "Write first-order, second-order, and third-order effects before committing.",
+      "failure": "Stopping at the obvious benefit and missing the downstream cost.",
+      "related": [
+        "inversion",
+        "goodharts_law",
+        "regret_minimization"
+      ],
+      "card": "cards/second_order_thinking.md"
+    },
+    {
+      "id": "inversion",
+      "title": "Inversion",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "decisions",
+        "risk",
+        "clarity"
+      ],
+      "summary": "Solve backwards by asking what would guarantee failure, then avoid it.",
+      "use_when": "The desired outcome is vague but the failure modes are easier to identify.",
+      "questions": [
+        "What would make this fail predictably?",
+        "What am I assuming must go right?",
+        "Which mistake is irreversible?",
+        "What should I stop doing first?"
+      ],
+      "action": "List the top failure paths and convert each into a prevention rule.",
+      "failure": "Using inversion as pessimism instead of operational risk control.",
+      "related": [
+        "via_negativa",
+        "second_order_thinking",
+        "redundancy"
+      ],
+      "card": "cards/inversion.md"
+    },
+    {
+      "id": "regret_minimization",
+      "title": "Regret Minimization",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "decisions",
+        "life",
+        "career"
+      ],
+      "summary": "Choose by asking which option your future self is least likely to regret.",
+      "use_when": "A decision has emotional weight, uncertainty, or a long time horizon.",
+      "questions": [
+        "At age 80, what would I wish I had tried?",
+        "Which regret is recoverable?",
+        "Which regret compounds if ignored?",
+        "Am I avoiding discomfort or avoiding real risk?"
+      ],
+      "action": "Write the reversible and irreversible regrets, then pick the option with the better long-term regret profile.",
+      "failure": "Romanticizing bold action when the real issue is unpriced downside.",
+      "related": [
+        "ten_ten_ten_rule",
+        "ab_z_framework",
+        "personal_swot"
+      ],
+      "card": "cards/regret_minimization.md"
+    },
+    {
+      "id": "ten_ten_ten_rule",
+      "title": "10-10-10 Rule",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "decisions",
+        "emotion",
+        "time_horizon"
+      ],
+      "summary": "View a choice through three time windows: 10 minutes, 10 months, and 10 years.",
+      "use_when": "Emotion is dominating a decision or a short-term discomfort hides long-term value.",
+      "questions": [
+        "How will this feel in 10 minutes?",
+        "What will matter in 10 months?",
+        "What will still matter in 10 years?",
+        "Which time window deserves priority here?"
+      ],
+      "action": "Score each option across the three windows and explain the tradeoff explicitly.",
+      "failure": "Pretending every decision deserves a 10-year lens.",
+      "related": [
+        "regret_minimization",
+        "second_order_thinking",
+        "paradox_of_choice"
+      ],
+      "card": "cards/ten_ten_ten_rule.md"
+    },
+    {
+      "id": "goodharts_law",
+      "title": "Goodharts Law",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "metrics",
+        "systems",
+        "incentives"
+      ],
+      "summary": "When a measure becomes the target, it stops being a reliable measure.",
+      "use_when": "You are optimizing a metric, KPI, habit score, leaderboard, or proxy signal.",
+      "questions": [
+        "What is the real goal behind this metric?",
+        "How could someone game it?",
+        "What behavior does this metric reward?",
+        "What qualitative signal should stay visible?"
+      ],
+      "action": "Pair every target metric with a counter-metric and a human review rule.",
+      "failure": "Treating dashboards as reality instead of instruments.",
+      "related": [
+        "second_order_thinking",
+        "input_goals",
+        "halo_effect"
+      ],
+      "card": "cards/goodharts_law.md"
+    },
+    {
+      "id": "ab_z_framework",
+      "title": "A-B-Z Framework",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "career",
+        "planning",
+        "strategy"
+      ],
+      "summary": "Hold a current plan, a near alternative, and a fallback plan at the same time.",
+      "use_when": "Planning a career move, project bet, business idea, or migration path.",
+      "questions": [
+        "What is Plan A?",
+        "What evidence would move me to Plan B?",
+        "What is the survival fallback?",
+        "What trigger forces a switch?"
+      ],
+      "action": "Define Plan A, Plan B, Plan Z, and the measurable trigger between them.",
+      "failure": "Using Plan Z as an excuse to avoid committing to Plan A.",
+      "related": [
+        "minimum_viable_product",
+        "regret_minimization",
+        "personal_swot"
+      ],
+      "card": "cards/ab_z_framework.md"
+    },
+    {
+      "id": "personal_swot",
+      "title": "Personal SWOT",
+      "category": "01_DECISION_MAKING",
+      "tags": [
+        "self_assessment",
+        "career",
+        "planning"
+      ],
+      "summary": "Map strengths, weaknesses, opportunities, and threats before choosing a path.",
+      "use_when": "You need a grounded view of fit, positioning, or personal strategy.",
+      "questions": [
+        "What advantage do I repeatedly underuse?",
+        "What weakness keeps recurring?",
+        "What opportunity is visible now?",
+        "What external threat can I prepare for?"
+      ],
+      "action": "Create a four-quadrant note and turn one item from each quadrant into an action.",
+      "failure": "Writing flattering traits instead of evidence-backed patterns.",
+      "related": [
+        "ab_z_framework",
+        "information_arbitrage",
+        "leverage"
+      ],
+      "card": "cards/personal_swot.md"
+    },
+    {
+      "id": "input_goals",
+      "title": "Input Goals",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "execution",
+        "habits",
+        "control"
+      ],
+      "summary": "Set goals around actions you control instead of outcomes you only influence.",
+      "use_when": "Outcome goals create anxiety, procrastination, or false failure.",
+      "questions": [
+        "What input can I do daily?",
+        "What output should this input influence?",
+        "How will I log completion?",
+        "What is the minimum viable repetition?"
+      ],
+      "action": "Convert the outcome into a weekly input quota with a tracking note.",
+      "failure": "Choosing inputs that are busywork rather than causal drivers.",
+      "related": [
+        "goodharts_law",
+        "parkinsons_law",
+        "compounding_snowball"
+      ],
+      "card": "cards/input_goals.md"
+    },
+    {
+      "id": "pareto_principle",
+      "title": "Pareto Principle",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "focus",
+        "prioritization",
+        "80_20"
+      ],
+      "summary": "A small share of causes often produces a large share of results.",
+      "use_when": "You have too many tasks, clients, features, habits, or study topics.",
+      "questions": [
+        "Which 20 percent creates most of the value?",
+        "Which tasks create almost no value?",
+        "What can be deleted, delegated, or delayed?",
+        "Where is the real bottleneck?"
+      ],
+      "action": "Rank items by impact and protect the top few from low-value work.",
+      "failure": "Using 80/20 as a slogan without measuring actual contribution.",
+      "related": [
+        "five_twenty_five_rule",
+        "leverage",
+        "parkinsons_law"
+      ],
+      "card": "cards/pareto_principle.md"
+    },
+    {
+      "id": "parkinsons_law",
+      "title": "Parkinsons Law",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "timeboxing",
+        "execution",
+        "constraints"
+      ],
+      "summary": "Work expands to fill the time available for its completion.",
+      "use_when": "Tasks sprawl, deadlines are loose, or perfectionism delays shipping.",
+      "questions": [
+        "What is the smallest useful version?",
+        "What deadline would force clarity?",
+        "What can be cut without breaking the outcome?",
+        "Where am I polishing instead of deciding?"
+      ],
+      "action": "Set a hard timebox and define the deliverable before starting.",
+      "failure": "Creating artificial urgency for work that actually needs deep thinking.",
+      "related": [
+        "minimum_viable_product",
+        "input_goals",
+        "pareto_principle"
+      ],
+      "card": "cards/parkinsons_law.md"
+    },
+    {
+      "id": "minimum_viable_product",
+      "title": "Minimum Viable Product",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "shipping",
+        "experiments",
+        "product"
+      ],
+      "summary": "Build the smallest artifact that can test a real assumption with a real user.",
+      "use_when": "A project is growing before its core assumption has been tested.",
+      "questions": [
+        "What assumption must be true?",
+        "What is the smallest test?",
+        "Who can give useful feedback?",
+        "What result would invalidate this?"
+      ],
+      "action": "Define one assumption, one artifact, one user, and one success threshold.",
+      "failure": "Calling a low-quality version an MVP when it does not test the core risk.",
+      "related": [
+        "ab_z_framework",
+        "parkinsons_law",
+        "fosbury_flop"
+      ],
+      "card": "cards/minimum_viable_product.md"
+    },
+    {
+      "id": "five_twenty_five_rule",
+      "title": "5/25 Rule",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "focus",
+        "prioritization",
+        "goals"
+      ],
+      "summary": "Identify the top five priorities and avoid the next twenty until the top five move.",
+      "use_when": "You are scattered across too many goals or side projects.",
+      "questions": [
+        "What are my top 25 goals?",
+        "Which five matter most now?",
+        "Which attractive goals must become avoid-at-all-costs?",
+        "What will I say no to this week?"
+      ],
+      "action": "Write the top five and an avoid list; review both weekly.",
+      "failure": "Treating the avoid list as temporary guilt instead of a real constraint.",
+      "related": [
+        "pareto_principle",
+        "compartmentalization",
+        "compounding_snowball"
+      ],
+      "card": "cards/five_twenty_five_rule.md"
+    },
+    {
+      "id": "compartmentalization",
+      "title": "Compartmentalization",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "attention",
+        "boundaries",
+        "focus"
+      ],
+      "summary": "Separate contexts so one domain does not leak into every other domain.",
+      "use_when": "Work, study, health, relationships, and admin keep interrupting each other.",
+      "questions": [
+        "Which context is leaking?",
+        "What boundary is missing?",
+        "What belongs in a capture note, not in my head?",
+        "When will this context be reviewed?"
+      ],
+      "action": "Assign each concern to a specific note, folder, time block, or review loop.",
+      "failure": "Suppressing important signals instead of giving them a proper container.",
+      "related": [
+        "five_twenty_five_rule",
+        "input_goals",
+        "parkinsons_law"
+      ],
+      "card": "cards/compartmentalization.md"
+    },
+    {
+      "id": "resistance",
+      "title": "Resistance",
+      "category": "02_PRODUCTIVITY",
+      "tags": [
+        "creative_work",
+        "procrastination",
+        "shipping"
+      ],
+      "summary": "The strongest avoidance often appears near work that matters.",
+      "use_when": "You repeatedly delay writing, publishing, studying, building, or asking.",
+      "questions": [
+        "What task am I circling but not doing?",
+        "What emotion appears before avoidance?",
+        "What is the next physical action?",
+        "Can I reduce the start to two minutes?"
+      ],
+      "action": "Name the avoided action and start a tiny version immediately.",
+      "failure": "Turning resistance into identity instead of treating it as a signal.",
+      "related": [
+        "input_goals",
+        "minimum_viable_product",
+        "parkinsons_law"
+      ],
+      "card": "cards/resistance.md"
+    },
+    {
+      "id": "antifragility",
+      "title": "Antifragility",
+      "category": "03_RESILIENCE",
+      "tags": [
+        "resilience",
+        "systems",
+        "upside"
+      ],
+      "summary": "Design systems that can improve from stress, volatility, and small shocks.",
+      "use_when": "A workflow, habit, project, or career path is too fragile under uncertainty.",
+      "questions": [
+        "What stress could make this stronger?",
+        "Where is downside capped?",
+        "Where is upside open-ended?",
+        "What small experiment creates learning?"
+      ],
+      "action": "Add small controlled stressors, feedback loops, and capped downside bets.",
+      "failure": "Confusing antifragility with recklessness or constant chaos.",
+      "related": [
+        "redundancy",
+        "via_negativa",
+        "exponential_thinking"
+      ],
+      "card": "cards/antifragility.md"
+    },
+    {
+      "id": "redundancy",
+      "title": "Redundancy",
+      "category": "03_RESILIENCE",
+      "tags": [
+        "backup",
+        "resilience",
+        "risk"
+      ],
+      "summary": "Keep spare capacity or backup paths where failure would be expensive.",
+      "use_when": "A single point of failure can break a workflow, project, or life system.",
+      "questions": [
+        "What breaks if this one thing fails?",
+        "What backup is cheap now and expensive later?",
+        "What dependency needs a fallback?",
+        "How often should the backup be tested?"
+      ],
+      "action": "Create one backup route and schedule a test of it.",
+      "failure": "Adding backup everywhere until the system becomes too heavy.",
+      "related": [
+        "inversion",
+        "antifragility",
+        "parkinsons_law"
+      ],
+      "card": "cards/redundancy.md"
+    },
+    {
+      "id": "via_negativa",
+      "title": "Via Negativa",
+      "category": "03_RESILIENCE",
+      "tags": [
+        "subtraction",
+        "health",
+        "risk"
+      ],
+      "summary": "Improve a system by removing what harms it before adding more complexity.",
+      "use_when": "More tools, habits, supplements, features, or plans are making things worse.",
+      "questions": [
+        "What can I remove?",
+        "What is creating drag?",
+        "What would stop making the problem worse?",
+        "Which addition is compensating for a bad default?"
+      ],
+      "action": "Delete or pause one harmful element before adding a new one.",
+      "failure": "Using subtraction as avoidance when a positive action is required.",
+      "related": [
+        "inversion",
+        "pareto_principle",
+        "paradox_of_choice"
+      ],
+      "card": "cards/via_negativa.md"
+    },
+    {
+      "id": "lindy_effect",
+      "title": "Lindy Effect",
+      "category": "03_RESILIENCE",
+      "tags": [
+        "durability",
+        "selection",
+        "time"
+      ],
+      "summary": "For nonperishable ideas and tools, survival over time is evidence of durability.",
+      "use_when": "Choosing books, practices, concepts, protocols, or long-lived tools.",
+      "questions": [
+        "How long has this survived?",
+        "Why did it persist?",
+        "Is this domain Lindy-relevant?",
+        "What recent alternative has unproven durability?"
+      ],
+      "action": "Prefer durable primitives when the cost of novelty is high.",
+      "failure": "Rejecting new ideas blindly because old things feel safer.",
+      "related": [
+        "via_negativa",
+        "hindsight_bias",
+        "antifragility"
+      ],
+      "card": "cards/lindy_effect.md"
+    },
+    {
+      "id": "sunk_cost_concorde",
+      "title": "Sunk Cost / Concorde Fallacy",
+      "category": "03_RESILIENCE",
+      "tags": [
+        "decisions",
+        "losses",
+        "projects"
+      ],
+      "summary": "Past investment should not justify future investment if the forward case is weak.",
+      "use_when": "You keep funding, building, studying, or defending something mainly because you already started.",
+      "questions": [
+        "Would I choose this again today?",
+        "What future value remains?",
+        "What am I afraid to admit?",
+        "What would I recover by stopping?"
+      ],
+      "action": "Ignore past cost, evaluate future expected value, and define a stop rule.",
+      "failure": "Quitting only because the past feels painful rather than because the future case is bad.",
+      "related": [
+        "commitment_bias",
+        "regret_minimization",
+        "ab_z_framework"
+      ],
+      "card": "cards/sunk_cost_concorde.md"
+    },
+    {
+      "id": "halo_effect",
+      "title": "Halo Effect",
+      "category": "04_COGNITIVE_BIASES",
+      "tags": [
+        "bias",
+        "judgment",
+        "people"
+      ],
+      "summary": "One positive trait can distort judgment of unrelated traits.",
+      "use_when": "Evaluating people, tools, companies, creators, or your own work.",
+      "questions": [
+        "Which trait is dominating my view?",
+        "What evidence is independent of the halo?",
+        "What would I think if the brand were removed?",
+        "Where might I be overgeneralizing?"
+      ],
+      "action": "Separate the observed trait from the claim being evaluated.",
+      "failure": "Replacing judgment with cynicism toward anything impressive.",
+      "related": [
+        "appeal_to_popularity",
+        "hindsight_bias",
+        "goodharts_law"
+      ],
+      "card": "cards/halo_effect.md"
+    },
+    {
+      "id": "commitment_bias",
+      "title": "Commitment Bias",
+      "category": "04_COGNITIVE_BIASES",
+      "tags": [
+        "bias",
+        "identity",
+        "decisions"
+      ],
+      "summary": "Prior commitments can pressure you to stay consistent after facts change.",
+      "use_when": "You defend an old decision, public opinion, project, or identity despite weak evidence.",
+      "questions": [
+        "What would I believe if I had not said this publicly?",
+        "What new evidence matters?",
+        "What identity is attached to this choice?",
+        "What update would be honorable?"
+      ],
+      "action": "State the new evidence and choose whether to recommit, revise, or exit.",
+      "failure": "Changing positions constantly to avoid accountability.",
+      "related": [
+        "sunk_cost_concorde",
+        "hindsight_bias",
+        "personal_swot"
+      ],
+      "card": "cards/commitment_bias.md"
+    },
+    {
+      "id": "hindsight_bias",
+      "title": "Hindsight Bias",
+      "category": "04_COGNITIVE_BIASES",
+      "tags": [
+        "bias",
+        "review",
+        "learning"
+      ],
+      "summary": "After an outcome, events can look more predictable than they were.",
+      "use_when": "Reviewing a win, failure, market move, relationship outcome, or project result.",
+      "questions": [
+        "What did I actually know then?",
+        "What probability did I assign?",
+        "Which signals were ambiguous?",
+        "What would improve the next forecast?"
+      ],
+      "action": "Keep decision logs with predictions before outcomes arrive.",
+      "failure": "Using hindsight to punish uncertainty instead of improving judgment.",
+      "related": [
+        "lindy_effect",
+        "halo_effect",
+        "commitment_bias"
+      ],
+      "card": "cards/hindsight_bias.md"
+    },
+    {
+      "id": "appeal_to_popularity",
+      "title": "Appeal To Popularity",
+      "category": "04_COGNITIVE_BIASES",
+      "tags": [
+        "bias",
+        "social_proof",
+        "judgment"
+      ],
+      "summary": "Popularity can indicate attention, not truth or usefulness.",
+      "use_when": "A trend, tool, belief, or creator feels credible mainly because many people agree.",
+      "questions": [
+        "What is the underlying evidence?",
+        "Who benefits if I follow the crowd?",
+        "Is popularity caused by quality or distribution?",
+        "What would I think in private?"
+      ],
+      "action": "Separate social proof from the actual claim and test the claim directly.",
+      "failure": "Ignoring useful crowd signals just to feel independent.",
+      "related": [
+        "halo_effect",
+        "information_arbitrage",
+        "goodharts_law"
+      ],
+      "card": "cards/appeal_to_popularity.md"
+    },
+    {
+      "id": "paradox_of_choice",
+      "title": "Paradox Of Choice",
+      "category": "04_COGNITIVE_BIASES",
+      "tags": [
+        "choice",
+        "focus",
+        "decision_fatigue"
+      ],
+      "summary": "Too many options can reduce action quality and increase dissatisfaction.",
+      "use_when": "You are stuck comparing tools, careers, courses, prompts, apps, or plans.",
+      "questions": [
+        "What decision criteria matter?",
+        "What options can be removed?",
+        "What is good enough?",
+        "When does more research stop paying?"
+      ],
+      "action": "Set criteria, cap options, pick, and schedule a review point.",
+      "failure": "Using choice limits to avoid exploring genuinely different options.",
+      "related": [
+        "five_twenty_five_rule",
+        "ten_ten_ten_rule",
+        "via_negativa"
+      ],
+      "card": "cards/paradox_of_choice.md"
+    },
+    {
+      "id": "leverage",
+      "title": "Leverage",
+      "category": "05_GROWTH_AND_LEVERAGE",
+      "tags": [
+        "scale",
+        "systems",
+        "outputs"
+      ],
+      "summary": "Use tools, code, media, capital, people, or processes to multiply output per unit of effort.",
+      "use_when": "A valuable action is repeated manually or limited by personal time.",
+      "questions": [
+        "What repeats?",
+        "What can be automated, delegated, documented, or productized?",
+        "What asset keeps working after I stop?",
+        "What leverage has low downside?"
+      ],
+      "action": "Turn one repeated action into a reusable asset.",
+      "failure": "Chasing leverage before the base action is valuable.",
+      "related": [
+        "pareto_principle",
+        "ten_one_rule",
+        "information_arbitrage"
+      ],
+      "card": "cards/leverage.md"
+    },
+    {
+      "id": "compounding_snowball",
+      "title": "Compounding / Snowball Effect",
+      "category": "05_GROWTH_AND_LEVERAGE",
+      "tags": [
+        "compounding",
+        "habits",
+        "assets"
+      ],
+      "summary": "Small gains can become large when reinvested consistently over time.",
+      "use_when": "Progress feels too slow, or you need a long-term accumulation strategy.",
+      "questions": [
+        "What can compound here?",
+        "What is the reinvestment loop?",
+        "What breaks the loop?",
+        "How will I measure trajectory rather than mood?"
+      ],
+      "action": "Define a repeatable input and a compounding asset it improves.",
+      "failure": "Expecting compounding before enough repetitions have occurred.",
+      "related": [
+        "input_goals",
+        "exponential_thinking",
+        "five_twenty_five_rule"
+      ],
+      "card": "cards/compounding_snowball.md"
+    },
+    {
+      "id": "exponential_thinking",
+      "title": "Exponential Thinking",
+      "category": "05_GROWTH_AND_LEVERAGE",
+      "tags": [
+        "growth",
+        "scale",
+        "forecasting"
+      ],
+      "summary": "Some systems change by compounding rates, not linear increments.",
+      "use_when": "Growth, learning curves, network effects, automation, or risk accelerates over time.",
+      "questions": [
+        "What grows with each cycle?",
+        "What rate matters?",
+        "Where does the curve bend?",
+        "What looks small now but scales fast?"
+      ],
+      "action": "Map the growth loop and identify the variable that changes the rate.",
+      "failure": "Applying exponential assumptions to systems without a real feedback loop.",
+      "related": [
+        "compounding_snowball",
+        "antifragility",
+        "leverage"
+      ],
+      "card": "cards/exponential_thinking.md"
+    },
+    {
+      "id": "information_arbitrage",
+      "title": "Information Arbitrage",
+      "category": "05_GROWTH_AND_LEVERAGE",
+      "tags": [
+        "knowledge",
+        "edge",
+        "markets"
+      ],
+      "summary": "Value appears when you know something useful before, deeper than, or across domains better than others.",
+      "use_when": "Looking for career edge, content ideas, investing insight, or strategic positioning.",
+      "questions": [
+        "What do I know that this audience does not?",
+        "What domain can be translated into another?",
+        "What signal is underpriced?",
+        "How can I validate the edge?"
+      ],
+      "action": "Create one artifact that transfers useful knowledge across contexts.",
+      "failure": "Mistaking obscure information for valuable information.",
+      "related": [
+        "personal_swot",
+        "appeal_to_popularity",
+        "leverage"
+      ],
+      "card": "cards/information_arbitrage.md"
+    },
+    {
+      "id": "ten_one_rule",
+      "title": "10/1 Rule",
+      "category": "05_GROWTH_AND_LEVERAGE",
+      "tags": [
+        "asymmetry",
+        "risk_reward",
+        "bets"
+      ],
+      "summary": "Prefer bets where upside can be much larger than downside.",
+      "use_when": "Choosing experiments, outreach, content, product bets, or learning paths.",
+      "questions": [
+        "What is the downside if this fails?",
+        "What is the plausible upside?",
+        "Can I cap loss and preserve upside?",
+        "How many attempts can I afford?"
+      ],
+      "action": "Run small downside-capped bets with explicit success and stop criteria.",
+      "failure": "Calling a lottery ticket asymmetric when the odds are unknowable or the downside is hidden.",
+      "related": [
+        "antifragility",
+        "minimum_viable_product",
+        "leverage"
+      ],
+      "card": "cards/ten_one_rule.md"
+    },
+    {
+      "id": "fosbury_flop",
+      "title": "Fosbury Flop",
+      "category": "05_GROWTH_AND_LEVERAGE",
+      "tags": [
+        "innovation",
+        "strategy",
+        "constraints"
+      ],
+      "summary": "A change in method can outperform more effort inside the old method.",
+      "use_when": "You are competing in a mature workflow where everyone optimizes the same moves.",
+      "questions": [
+        "What rule is assumed but not required?",
+        "What constraint can be approached differently?",
+        "What would look strange but legal?",
+        "What evidence would prove the new method works?"
+      ],
+      "action": "Identify one convention and design a small test that violates it without violating the goal.",
+      "failure": "Being contrarian for style instead of performance.",
+      "related": [
+        "minimum_viable_product",
+        "information_arbitrage",
+        "exponential_thinking"
+      ],
+      "card": "cards/fosbury_flop.md"
+    }
+  ]
+}

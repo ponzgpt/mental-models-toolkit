@@ -26,7 +26,7 @@ Use this skill when the user asks for help with:
 
 ## Procedure
 
-1. Read `data/mental_models_index.json`.
+1. Read `references/mental_models_index.json` (in this skill folder; in a clone it is also at `data/mental_models_index.json`).
 2. Select at most three relevant models.
 3. Prefer models that change the next action.
 4. Ask only the diagnostic questions needed to reduce ambiguity.
